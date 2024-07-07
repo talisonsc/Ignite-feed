@@ -40,18 +40,72 @@
   outline: 2px solid var(--green-500);
 }
 .author {
-  display:flex;
+  display: flex;
   align-items: center;
   gap: 1rem;
 }
 .authorInfo strong {
   display: block;
-  color:var(--gray-100);
+  color: var(--gray-100);
   line-height: 1.6;
 }
 .authorInfo span {
   display: block;
-  color:var(--gray-400);
+  color: var(--gray-400);
   line-height: 1.6;
   font-size: 0.875rem;
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
+  color: var(--gray-100);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.commentForm textarea {
+  width: 100%;
+  margin-top: 1rem;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  border-radius: 8px;
+  border: 1px solid var(--gray-900);
+  resize: none;
+  height: 6rem;
+  padding: 1rem;
+  line-height: 1.4;
+  transition: border 0.1s;
+}
+.commentForm textarea:hover {
+  border: 1px solid var(--green-500);
+}
+
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button[type="submit"] {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  background: var(--green-500);
+  color: var(--gray-100);
+  border: 0;
+  font-weight: bold;
+  transition: background-color 0.1s;
+}
+.commentForm button[type="submit"]:hover {
+  background: var(--green-300);
 }
